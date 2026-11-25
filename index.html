@@ -29,12 +29,8 @@ h1 {font-size:clamp(2.6rem,7vw,5.8rem);line-height:1.04;letter-spacing:-.055em;m
 p {color:var(--muted)}
 .button {display:inline-block;background:var(--plum);color:white;border-radius:100px;padding:.7rem 1.25rem;margin-top:.35rem;text-decoration:none;font-weight:700}
 .button:hover {background:#402166}
-.art {margin:0;position:relative;display:grid;place-items:center;aspect-ratio:1.17;background:radial-gradient(circle at 80% 22%,#fce2ef,transparent 54%),radial-gradient(circle at 12% 90%,#e1e8fc,transparent 48%),#e9dcfa;border-radius:2rem;border:1px solid #e5d7ee;overflow:hidden}
-.orbit {position:absolute;width:78%;aspect-ratio:1.5;border:1px solid #aa8cc7;border-radius:50%;transform:rotate(-23deg)}
-.tile {display:grid;place-items:center;width:47%;aspect-ratio:1;background:#fff9;border:1px solid #fff;border-radius:24%;backdrop-filter:blur(5px);transform:rotate(-9deg);box-shadow:0 18px 40px #51388626;color:var(--plum);font-weight:700;font-size:clamp(1.8rem,6vw,5rem);font-family:ui-monospace,monospace}
-.spark {position:absolute;color:#75519e;font-size:2rem;line-height:1}
-.spark.one {top:17%;right:17%}
-.spark.two {bottom:18%;left:17%;font-size:1.3rem}
+.art {margin:0;display:grid;place-items:center;padding:clamp(1rem,4vw,2.3rem);background:radial-gradient(circle at 82% 18%,#ffe3ef,transparent 57%),#eee2fa;border-radius:2rem;border:1px solid #e5d7ee}
+.art img {display:block;width:min(100%,24rem);height:auto;border-radius:50%;box-shadow:0 12px 32px #51388626}
 .panel {background:white;border:1px solid var(--line);border-radius:1.5rem;padding:clamp(1.2rem,4vw,2.6rem)}
 section {margin-bottom:clamp(2rem,6vw,4.5rem);scroll-margin-top:1.25rem}
 h2 {font-size:clamp(1.55rem,4vw,2.25rem);line-height:1.35;margin-bottom:1rem}
@@ -44,7 +40,7 @@ h3 {font-size:1.22rem;line-height:1.5;margin-bottom:.5rem}
 .icon {display:grid;place-items:center;width:3.4rem;height:3.4rem;border-radius:1rem;background:#e8dcf7;color:var(--plum);font-size:1.4rem;font-weight:800}
 .grid {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}
 footer {border-top:1px solid var(--line);padding-block:1.4rem;color:var(--muted);font-size:.9rem}
-@media(max-width:44rem) {.hero,.grid {grid-template-columns:1fr}.art {max-width:29rem;width:100%;aspect-ratio:1.4}.tile {width:38%}}
+@media(max-width:44rem) {.hero,.grid {grid-template-columns:1fr}.art {max-width:29rem;width:100%;justify-self:center}}
 @media(max-width:25rem) {.project {grid-template-columns:1fr}}
 </style>
 </head>
@@ -67,10 +63,9 @@ footer {border-top:1px solid var(--line);padding-block:1.4rem;color:var(--muted)
       <p>AIと一緒に、毎日の暮らしに役立つものをつくっています。</p>
       <a class="button" href="#works">制作中のアプリを見る</a>
     </div>
-    <div class="art" aria-hidden="true">
-      <div class="orbit"></div><div class="tile">&lt;/&gt;</div>
-      <span class="spark one">✦</span><span class="spark two">✧</span>
-    </div>
+    <figure class="art">
+      <img src="./atelier-mile-illustration.jpg" width="850" height="850" alt="魔女帽の少女と2匹のチワワ。少女の指先にひらめきの電球が光るイラスト。">
+    </figure>
   </section>
   <section id="works" aria-labelledby="works-title">
     <h2 id="works-title">作品</h2>
